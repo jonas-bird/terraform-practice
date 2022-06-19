@@ -15,3 +15,8 @@ resource "local_file" "cubs" {
   filename = "/home/jonas/playground/${each.value}"
   content = "${each.value} is a very cute cub"
 }
+
+output petpet-name {
+  value  = random_pet.my-bear.id
+  description = "Record the value of the random petpet name!"
+}
