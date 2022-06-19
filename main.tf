@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    local = {
+      source = "hashicorp/local"
+      version = "2.2.2"
+    }
+  }
+}
+
+
 resource "local_file" "petPet" {
   filename = var.filename
   content  = "The pet-pet's name is ${random_pet.myBear.id}"
