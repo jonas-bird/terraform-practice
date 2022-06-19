@@ -18,6 +18,6 @@ resource "local_file" "cubs" {
 
 
 output "petPetName" {
-  value       = random_pet.my-bear.id
+  value       = random_pet.myBear.id
   description = "Record the value of the random petpet name!"
 }
