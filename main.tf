@@ -21,3 +21,10 @@ output "petPetName" {
   value       = random_pet.myBear.id
   description = "Record the value of the random petpet name!"
 }
+
+resource "local_file" "bearTypeFiles" {
+  filename = each.value
+  for_each = toset(var.bear-files)
+  content = "List bear names below"
+}
+
