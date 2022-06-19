@@ -18,3 +18,4 @@ variable "cubsnames" {
   type = set(string)
   default = ["Paddington", "Freddy", "Lolla", "Winnifred"]
 }
+
