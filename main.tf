@@ -1,6 +1,6 @@
 resource "local_file" "petPet" {
   filename = var.filename
-  content  = "The pet-pet's name is ${random_pet.my-bear.id}"
+  content  = "The pet-pet's name is ${random_pet.myBear.id}"
 }
 
 resource "random_pet" "myBear" {
@@ -10,7 +10,7 @@ resource "random_pet" "myBear" {
 }
 
 resource "local_file" "cubs" {
-  depends_on = [local_file.petpet]
+  depends_on = [local_file.petPet]
   for_each   = var.cubsnames
   filename   = "/home/jonas/playground/${each.value}"
   content    = "${each.value} is a very cute cub"
